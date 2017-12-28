@@ -26,7 +26,7 @@ def create_jwt_authentication_policy(config, public_key=None, algorithm=None,
     else:
             auth_type = None
 
-    return JWTAuthenticationPolicy(,
+    return JWTAuthenticationPolicy(
             public_key=public_key,
             algorithm=algorithm,
             leeway=leeway,
@@ -34,7 +34,7 @@ def create_jwt_authentication_policy(config, public_key=None, algorithm=None,
             auth_type=auth_type,
             audience=audience,
             userIdTokenKey=userIdTokenKey,
-            unauthorizedUserId=unauthorizedUserId
+            unauthorizedUserId=unauthorizedUserId,
             verifyToken=verifyToken)
 
 

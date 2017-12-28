@@ -55,7 +55,7 @@ class JWTAuthenticationPolicy(CallbackAuthenticationPolicy):
 
     def unauthenticated_userid(self, request):
         claims = self.get_claims(request)
-        if claims != {} && self.userIdTokenKey in claims:
+        if claims != {} and self.userIdTokenKey in claims:
             return claims[self.userIdTokenKey]
         else:
             return self.unauthorizedUserId
